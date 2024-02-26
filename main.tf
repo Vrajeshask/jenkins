@@ -11,7 +11,7 @@ resource "azurerm_virtual_network" "ncpl-vn" {
   name                = "ncpl-vn"
   address_space       = ["10.0.0.0/16"]
   location            = azurerm_resource_group.ncpl-rg.location
-  resource_group_name = azurerm_resource_group.example.name
+  resource_group_name = azurerm_resource_group.ncpl-rg.name
 }
 
 resource "azurerm_subnet" "ncpl-subnet" {
